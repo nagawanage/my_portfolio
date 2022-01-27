@@ -1,0 +1,141 @@
+/* メディアクエリ */
+$sm: 320px;
+$md: 600px;
+$lg: 960px;
+
+$breakpoints-down: (
+  "sm": "screen and (max-width: #{$sm})",
+  "md": "screen and (max-width: #{$md})",
+  "lg": "screen and (max-width: #{$lg})",
+) !default;
+
+$breakpoints-up: (
+  "sm": "screen and (min-width: #{$sm})",
+  "md": "screen and (min-width: #{$md})",
+  "lg": "screen and (min-width: #{$lg})",
+) !default;
+
+$breakpoints-range: (
+  "sm": "screen and (min-width: 0px) and (max-width: #{$sm})",
+  "md": "screen and (min-width: #{$sm} + 1px) and (max-width: #{$md})",
+  "lg": "screen and (min-width: #{$md} + 1px) and (max-width: #{$lg})",
+  // 'xl': 'screen and (min-width: 961px) and (max-width: 1200px)',
+) !default;
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoints-down, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoints-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-range($breakpoint: md) {
+  @media #{map-get($breakpoints-range, $breakpoint)} {
+    @content;
+  }
+}
+
+/* スマホ用フォントサイズレスポンシブ */
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport: 320) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin font-size_vw($font_size: 1) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+/* btn */
+@mixin btn($color: $cWhite, $border: none, $width: 200px, $isAfter: true) {
+  color: $color;
+  font-weight: bold;
+  width: 200px;
+  border: $border;
+  border-radius: 45px;
+  text-align: center;
+  & a {
+    padding: 20px 0;
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+    width: 100%;
+
+    @if ($isAfter) {
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 1.5rem; //!
+        transform: translateY(-50%);
+        font-family: "Font Awesome 5 Free";
+        content: "\f0da";
+        display: inline-block;
+        transition: all 0.3s; //!
+      }
+      &:hover {
+        &::after {
+          right: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin grad-btn($color-1: #7633a4, $color-2: #250d65) {
+  position: relative;
+  z-index: 0; //! 疑似要素よりも大きな値を指定
+  overflow: hidden; //! border-radiusなどを指定する場合は指定
+  background: transparent;
+  // transition: 0.8s;
+  &::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, $color-1, $color-2);
+    transition: 0.8s;
+    z-index: 0;
+  }
+  &::after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, $color-2, $color-1);
+    z-index: -2;
+  }
+  &:hover::before {
+    opacity: 0;
+  }
+}
+
+@mixin nav-underline() {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: $cWhite;
+    bottom: -7px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+    transform-origin: left top;
+  }
+  &:hover::after {
+    transform: scale(1, 1);
+  }
+}

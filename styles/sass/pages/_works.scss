@@ -1,0 +1,35 @@
+.works-detail {
+  &__list {
+    @include mq-up(md) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    &:not(:last-child) {
+      @include mq-down(md) {
+        margin: 40px 15px;
+      }
+    }
+
+    & img {
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+      margin-bottom: 15px;
+    }
+  }
+
+  &__desc {
+    & a {
+      color: #000;
+      display: inline-block;
+      text-decoration: underline;
+      width: 100%;
+    }
+    @include mq-up(md) {
+      font-size: 16px;
+    }
+  }
+}

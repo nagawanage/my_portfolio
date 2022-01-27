@@ -1,0 +1,19 @@
+/* arrow-animation */
+@keyframes arrow-animation {
+  0% {
+    transform: scale(1, 0); //(x, y)
+    transform-origin: 0 0; //一番上を基準に、下に伸びていく
+  }
+  50% {
+    transform: scale(1, 1); //伸び切る
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1); //100%から縮んでいく
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%; //下を基準に、上が収束していく
+  }
+}

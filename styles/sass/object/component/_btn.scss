@@ -1,0 +1,7 @@
+.btn-link {
+  display: inline-block;
+  margin-top: 30px;
+  @extend %font-sm;
+  @include grad-btn();
+  @include btn($border: 1px $cWhite solid, $width: 200px);
+}

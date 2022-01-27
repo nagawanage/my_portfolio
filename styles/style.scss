@@ -1,0 +1,29 @@
+/* Foundation */
+@import "sass/foundation/variables";
+@import "sass/foundation/mixins";
+@import "sass/foundation/animations.scss";
+@import "sass/foundation/base";
+
+/* Layout */
+@import "sass/layout/footer.scss";
+@import "sass/layout/header.scss";
+@import "sass/layout/hero.scss";
+@import "sass/layout/split.scss";
+@import "sass/layout/layout";
+
+/* Object */
+@import "sass/object/component/breadcrumb.scss";
+@import "sass/object/component/btn.scss";
+@import "sass/object/component/form.scss";
+@import "sass/object/component/page-top.scss";
+@import "sass/object/component/section-title";
+// @import "sass/object/component/swiper.scss";
+
+@import "sass/object/project/icon.scss";
+@import "sass/object/project/mobile-menu.scss";
+
+@import "sass/object/utility/u-show-sp.scss";
+
+/* Pages */
+@import "sass/pages/index";
+@import "sass/pages/works";

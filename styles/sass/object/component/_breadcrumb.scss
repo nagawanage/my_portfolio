@@ -1,0 +1,35 @@
+.breadcrumb {
+  padding: 5px 0;
+  list-style: none;
+  background-color: $cBgGray;
+
+  &__list {
+    overflow: hidden;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline;
+    font-size: 12px;
+    list-style: none;
+    text-transform: uppercase;
+
+    & a {
+      color: $cBlue;
+    }
+    & a:hover {
+      text-decoration: underline;
+    }
+    &::after {
+      padding: 0 0.5em;
+      content: ">";
+      color: #555;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}

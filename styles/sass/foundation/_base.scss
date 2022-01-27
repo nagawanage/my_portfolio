@@ -1,0 +1,56 @@
+/******************************************************************
+ Stylesheet: ベーススタイル
+******************************************************************/
+body {
+  font: 16px / 1.6 "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo",
+    "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", "Osaka", sans-serif; //! font-size / line-height
+  color: $cBlack;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  // color: $cBlue;
+  transition: opacity 0.3s;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+// ::selection {
+//   background-color: $cBlue;
+//   color: #fff;
+// }
+
+// 定義
+%font-sm {
+  font-size: 14px;
+}
+
+%font-lg {
+  font-size: 44px;
+  @include mq-up(lg) {
+    font-size: 72px;
+  }
+}
+
+%font-weight-lighter {
+  font-weight: 300;
+}

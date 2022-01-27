@@ -1,0 +1,20 @@
+.sec-title,
+.sec-sub-title {
+  color: $cBlue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sec-title {
+  font-size: 30px;
+  @include mq-up(lg) {
+    font-size: 36px;
+  }
+}
+
+.sec-sub-title {
+  font-size: 13px;
+  @include mq-up(lg) {
+    font-size: 16px;
+  }
+}

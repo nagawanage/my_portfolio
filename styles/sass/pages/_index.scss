@@ -1,0 +1,235 @@
+/*--------------------------------
+ 見出し
+---------------------------------*/
+.title {
+  font-size: 34px;
+  font-weight: normal;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.lead {
+  margin-bottom: 30px;
+}
+
+/*--------------------------------
+  Skill
+  ---------------------------------*/
+.skill {
+  padding-top: 80px;
+  &--list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -50px;
+  }
+
+  &--icon {
+    font-size: 60px;
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  &--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 48%;
+    margin-bottom: 50px;
+    @include mq-up(md) {
+      align-items: flex-start;
+    }
+  }
+
+  &--img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  &--body {
+    flex: 1;
+  }
+
+  &--name {
+    margin-bottom: 3px;
+  }
+
+  .icon {
+    &-html {
+      color: $color-html;
+    }
+    &-css {
+      color: $color-css;
+    }
+    &-sass {
+      font-size: 50px;
+      color: $color-sass;
+    }
+    &-js {
+      color: $color-js;
+    }
+    &-wp {
+      color: $color-wp;
+    }
+    &-git {
+      color: $color-git;
+    }
+  }
+}
+
+/*--------------------------------
+ Works
+---------------------------------*/
+.works {
+  &--list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -40px;
+    @include mq-down(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  &--item {
+    width: 31.74603%;
+    margin-right: 1.5873%;
+    margin-bottom: 40px;
+    @include mq-down(lg) {
+      flex: 0 0 48%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    & > a {
+      color: #333;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      // transform: scale(1.1);
+      transition: all 0.3s;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &--img {
+    & img {
+      border: 1px solid #e6e6e6;
+      @include mq-down(lg) {
+        object-fit: cover;
+        width: inherit;
+        height: 40vw;
+      }
+    }
+  }
+
+  &--name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+  &--info {
+    font-size: 12px;
+  }
+}
+
+/*--------------------------------
+  Contact
+  ---------------------------------*/
+.contact {
+  &--item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &--text {
+    margin-top: 10px;
+  }
+}
+
+//
+.test {
+  .Block1 {
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%); //左上から時計回り
+    background-color: #191970;
+    color: #ccc;
+    padding: 60px 0 10px 0;
+  }
+}
+//
+
+/*--------------------------------
+ 下層：Worksページ
+---------------------------------*/
+.article {
+  padding: 80px 0;
+
+  &--inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &--title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &--img {
+    margin-bottom: 20px;
+  }
+
+  &--body {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    & img {
+      margin-bottom: 30px;
+    }
+
+    & p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--info-title {
+    font-size: 15px;
+  }
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  body {
+    // font-size: 13px;
+    // line-height: 1.7;
+  }
+
+  /* Skill */
+  .skill--list {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .skill--item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skill--item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 20px;
+  }
+}

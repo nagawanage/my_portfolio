@@ -1,0 +1,78 @@
+%form-cell {
+  padding: 8px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  @include mq-range(md) {
+    width: 100%;
+  }
+}
+
+.form {
+  &__heading {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  &__body {
+    background: $cBgGray;
+    padding: 30px;
+    @include mq-up(md) {
+      padding: 90px;
+    }
+  }
+  &__group:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  &__input,
+  &__select {
+    @extend %form-cell;
+    @include mq-up(md) {
+      width: 300px;
+    }
+  }
+  &__textarea {
+    @include mq-up(md) {
+      width: 400px;
+    }
+    @include mq-up(lg) {
+      width: 600px;
+    }
+  }
+  & input[type="radio"] {
+    // margin-left: 0;
+    transform: scale(1.2); //!
+  }
+  & input[type="tel"] {
+    width: 200px;
+  }
+  &__note {
+    font-weight: normal;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  &__radio {
+    & label {
+      font-size: 15px;
+    }
+    @include mq-up(md) {
+      display: inline;
+      margin-right: 35px;
+    }
+  }
+  &__textarea {
+    @extend %form-cell;
+  }
+  & .required::after {
+    content: "*必須";
+    font-size: 13px;
+    color: $cBlue;
+    padding-left: 10px;
+    vertical-align: text-top;
+  }
+}

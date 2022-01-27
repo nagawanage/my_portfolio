@@ -1,0 +1,66 @@
+.header {
+  background-color: $cBlue;
+  font-size: 24px;
+  padding: 20px;
+  position: fixed;
+  transition-duration: 0.5s;
+  width: 100%;
+  z-index: 10;
+
+  &.is-active {
+    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(var(--color-primary-rgb), 0.9);
+    padding: 10px 20px;
+    transition-duration: 0.5s;
+  }
+  &__inner {
+    align-items: center;
+    display: grid;
+    grid-template: 1fr / 1fr 40px;
+    // height: 100%;
+  }
+  &__title {
+    font-family: "Fredericka the Great", cursive;
+    font-size: inherit;
+    // font-weight: 900;
+    & a {
+      color: $cWhite;
+    }
+  }
+  & .nav__item a {
+    color: $cWhite;
+  }
+
+  @include mq-up(md) {
+    line-height: 1;
+    padding: 30px;
+    &.transform {
+      padding: 10px 30px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__nav {
+      display: block;
+    }
+  }
+
+  @include mq-up(md) {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    & .nav__list {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: calc(10px + 1vw);
+      font-size: 16px;
+    }
+    & .burger-menu {
+      display: none;
+    }
+    & .nav__item {
+      @include nav-underline();
+    }
+  }
+}
