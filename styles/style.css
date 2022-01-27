@@ -211,7 +211,7 @@ button {
 }
 
 .header {
-  background-color: #0b365b;
+  background-color: #082742;
   font-size: 24px;
   padding: 20px;
   position: fixed;
@@ -473,12 +473,12 @@ button {
   }
   .split--body {
     width: 100%;
+    padding: 60px 0;
     padding-right: 3%;
     padding-left: 8%;
   }
   .split--img {
     width: 100%;
-    margin-bottom: 20px;
     background-image: url(../images/create-3026190_1920.jpg);
   }
   .split--title {
@@ -571,7 +571,7 @@ button {
 }
 
 .breadcrumb__item a {
-  color: #0b365b;
+  color: #082742;
 }
 
 .breadcrumb__item a:hover {
@@ -746,7 +746,7 @@ button {
 .form .required::after {
   content: "*必須";
   font-size: 13px;
-  color: #0b365b;
+  color: #082742;
   padding-left: 10px;
   vertical-align: text-top;
 }
@@ -754,7 +754,7 @@ button {
 #js-page-top {
   position: fixed;
   right: 15px;
-  background: #0b365b;
+  background: #082742;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -785,7 +785,7 @@ button {
 
 .sec-title,
 .sec-sub-title {
-  color: #0b365b;
+  color: #082742;
   font-weight: bold;
   text-align: center;
 }
@@ -825,7 +825,7 @@ button {
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: #0b365b;
+    background-color: #082742;
   }
   .nav-wrapper.is-show {
     -webkit-transform: translateX(0);
@@ -836,7 +836,7 @@ button {
   .nav-wrapper .header__nav {
     position: fixed;
     z-index: 20;
-    background: #0b365b;
+    background: #082742;
     width: 100%;
     height: 100%;
     top: 0;
@@ -930,6 +930,18 @@ button {
 
 .lead {
   margin-bottom: 30px;
+}
+
+/*--------------------------------
+  About
+  ---------------------------------*/
+.about {
+  background-color: #212d3d;
+  color: #eee;
+}
+
+.about .title {
+  color: #eee;
 }
 
 /*--------------------------------
