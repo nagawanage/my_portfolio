@@ -29,6 +29,11 @@
     grid-template-columns: 140px 1fr;
     gap: 50px;
     align-items: center;
+    @include mq-down(md) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+    }
   }
   &--img {
     & img {
@@ -148,6 +153,9 @@
         opacity: 0.9;
         transform: scale(1.05);
       }
+    }
+    @include mq-down(md) {
+      width: 300px;
     }
   }
 

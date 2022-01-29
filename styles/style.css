@@ -955,6 +955,15 @@ button {
           align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .about--body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+}
+
 .about--img img {
   background: white;
   border-radius: 50%;
@@ -1109,6 +1118,12 @@ button {
   opacity: 0.9;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+  .works--img {
+    width: 300px;
+  }
 }
 
 .works--sitename {
