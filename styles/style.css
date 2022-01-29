@@ -936,12 +936,31 @@ button {
   About
   ---------------------------------*/
 .about {
-  background-color: #212d3d;
+  background-color: #082742;
   color: #eee;
 }
 
 .about .title {
   color: #eee;
+}
+
+.about--body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 140px 1fr;
+      grid-template-columns: 140px 1fr;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about--img img {
+  background: white;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 140px;
 }
 
 /*--------------------------------
@@ -1038,66 +1057,61 @@ button {
  Works
 ---------------------------------*/
 .works--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: -40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .works--list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 960px) {
   .works--list {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
 .works--item {
-  width: 31.74603%;
-  margin-right: 1.5873%;
-  margin-bottom: 40px;
-}
-
-@media screen and (max-width: 960px) {
-  .works--item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 48%;
-            flex: 0 0 48%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .works--item > a {
   color: #333;
 }
 
-.works--item:hover {
-  opacity: 0.9;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 .works--item:nth-of-type(3n) {
   margin-right: 0;
 }
 
+.works--img {
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+}
+
 .works--img img {
   border: 1px solid #e6e6e6;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-@media screen and (max-width: 960px) {
-  .works--img img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: inherit;
-    height: 40vw;
-  }
+.works--img img:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.works--name {
+.works--sitename {
   font-size: 14px;
   font-weight: bold;
   margin-top: 8px;
@@ -1116,14 +1130,6 @@ button {
 
 .contact--text {
   margin-top: 10px;
-}
-
-.test .Block1 {
-  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
-  background-color: #191970;
-  color: #ccc;
-  padding: 60px 0 10px 0;
 }
 
 /*--------------------------------
@@ -1169,7 +1175,7 @@ button {
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
-  /* Skill */
+  /* Skills */
   .skill--list {
     display: block;
     margin-bottom: 0;
@@ -1181,6 +1187,7 @@ button {
   .skill--item:last-child {
     margin-bottom: 0;
   }
+  /* Works */
   /* フッター */
   .footer {
     padding: 20px;

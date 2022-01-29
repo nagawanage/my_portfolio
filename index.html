@@ -8,7 +8,7 @@
   <meta property='og:title' content='WebデザイナーNAGAWA Portfolio'>
   <meta property='og:url' content='URLが入る'>
   <meta property='og:description' content='NAGAWAのポートフォリオサイトです。'>
-  <meta property="og:image" content="images/ogp.png">
+  <meta property="og:image" content="./images/ogp.png">
   <meta name="description" content="NAGAWAのポートフォリオサイトです" />
   <title>NAGAWA Portfolio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="styles/ress.css" media="all" rel="stylesheet" type="text/css" />
   <link href="styles/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
   <!-- inview -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
@@ -75,9 +75,16 @@
       <section class="about l-section" id="about">
         <div class="l-inner">
           <h2 class="title">About</h2>
-          <p>
-            1991年3月生まれ。茨城県つくばみらい市出身。<br>国立大学の工学部を卒業後、2013年よりITエンジニアとして働いています。<br>現在はWebアプリケーション開発や、Pythonでのデータ分析業務に携わっています。
-          </p>
+          <div class="about--body">
+            <p class="about--img"><img src="./images/person.png" alt="私のアイコン" /></p>
+            <p>
+              1991年3月生まれ。茨城県つくばみらい市出身。<br>
+              国立大学の工学部を卒業後、2013年よりITエンジニアとして働いています。<br>
+              現在はWebアプリケーション開発や、データ分析関連の開発に携わっています。<br>
+              趣味はサッカー、キャンプなど。<br>
+              好きなTV番組は家事ヤロウ、カンブリア宮殿です。
+            </p>
+          </div>
         </div>
       </section>
       <!-- /about -->
@@ -124,9 +131,9 @@
             <div class="skill--item js-fadeInUp">
               <div class="skill--icon icon-git fab fa-git-alt"></div>
               <div class="skill--body">
-                <h3 class="skill--name">git</h3>
+                <h3 class="skill--name">Git</h3>
                 <p class="skill--text">
-                  基本的な操作からgit-flowの概念に基づくブランチの役割まで理解しております。お客様の運用に合わせた対応が可能です。</p>
+                  基本的な操作からgit-flowの概念に基づくブランチの役割まで理解しております。お客様のソース管理に合わせた対応が可能です。</p>
               </div>
             </div>
           </div>
@@ -143,35 +150,35 @@
               <a href="https://nagawanage.github.io/html_po-design/" alt="サンプルコーポレートサイト" target="_blank"
                 rel="noopener noreferrer">
                 <p class="works--img"><img src="./images/my_work1.png" alt="" /></p>
-                <p class="works--name">架空コーポレートサイト</p>
+                <p class="works--sitename">架空コーポレートサイト</p>
                 <p class="works--info">コーディング（レスポンシブ）</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
               <a href="works-template.html">
                 <p class="works--img"><img src="./images/alyssa-ledesma-TJlU.jpg" alt="sample" /></p>
-                <p class="works--name">サッカークラブHP</p>
+                <p class="works--sitename">サッカークラブHP</p>
                 <p class="works--info">デザイン・コーディング（WordPress）</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
               <a href="works-template.html">
-                <p class="works--img"><img src="images/works-dummy-thumb.jpg" alt="sample" /></p>
-                <p class="works--name">作品名が入る</p>
+                <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="sample" /></p>
+                <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
               <a href="works-template.html">
-                <p class="works--img"><img src="images/works-dummy-thumb.jpg" alt="" /></p>
-                <p class="works--name">作品名が入る</p>
+                <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="" /></p>
+                <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
               <a href="works-template.html">
-                <p class="works--img"><img src="images/works-dummy-thumb.jpg" alt="" /></p>
-                <p class="works--name">作品名が入る</p>
+                <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="" /></p>
+                <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
               </a>
             </div>

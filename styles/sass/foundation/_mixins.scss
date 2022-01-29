@@ -2,24 +2,27 @@
 $sm: 320px;
 $md: 600px;
 $lg: 960px;
+$xl: 1200px;
 
 $breakpoints-down: (
   "sm": "screen and (max-width: #{$sm})",
   "md": "screen and (max-width: #{$md})",
   "lg": "screen and (max-width: #{$lg})",
+  "xl": "screen and (max-width: #{$xl})",
 ) !default;
 
 $breakpoints-up: (
   "sm": "screen and (min-width: #{$sm})",
   "md": "screen and (min-width: #{$md})",
   "lg": "screen and (min-width: #{$lg})",
+  "xl": "screen and (min-width: #{$xl})",
 ) !default;
 
 $breakpoints-range: (
   "sm": "screen and (min-width: 0px) and (max-width: #{$sm})",
   "md": "screen and (min-width: #{$sm} + 1px) and (max-width: #{$md})",
   "lg": "screen and (min-width: #{$md} + 1px) and (max-width: #{$lg})",
-  // 'xl': 'screen and (min-width: 961px) and (max-width: 1200px)',
+  "xl": "screen and (min-width: #{$lg} + 1px) and (max-width: #{$xl})",
 ) !default;
 
 @mixin mq-down($breakpoint: md) {
