@@ -1068,23 +1068,23 @@ button {
 .works--list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   gap: 30px;
   justify-items: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 960px) {
   .works--list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 1200px) {
   .works--list {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1103,8 +1103,10 @@ button {
 
 .works--img {
   overflow: hidden;
-  width: 400px;
-  height: 300px;
+  width: 320px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .works--img img {
@@ -1112,6 +1114,8 @@ button {
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  width: 100%;
+  height: 100%;
 }
 
 .works--img img:hover {
@@ -1120,9 +1124,12 @@ button {
           transform: scale(1.05);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .works--img {
-    width: 300px;
+    width: 400px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -1145,46 +1152,6 @@ button {
 
 .contact--text {
   margin-top: 10px;
-}
-
-/*--------------------------------
- 下層：Worksページ
----------------------------------*/
-.article {
-  padding: 80px 0;
-}
-
-.article--inner {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.article--title {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.article--img {
-  margin-bottom: 20px;
-}
-
-.article--body {
-  max-width: 720px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.article--body img {
-  margin-bottom: 30px;
-}
-
-.article--body p {
-  margin-bottom: 30px;
-}
-
-.article--info-title {
-  font-size: 15px;
 }
 
 /*media Queries 767
