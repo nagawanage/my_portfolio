@@ -58,31 +58,34 @@
     <main class="content">
 
       <!-- split -->
-      <div class="split">
-        <div class="split--body">
-          <p class="split--title">WATARU<br>NAGATSUKA</p>
-          <p class="split--text">
-            「誰の、どんな問題を解決するのか？」<br class="u-show-sp">
-            「そのためにどうするのか？」を考え、<br class="u-show-sp">
-            ユーザーとお客様に愛されるようなサイト作りを目指します。<br>
-            ぜひ、デザインからコーディングまでご相談ください。<br>
-          </p>
+      <div id="vanta">
+        <div class="split">
+          <div class="split--img"></div>
+          <div class="split--body">
+            <p class="split--title">WATARU<br>NAGATSUKA</p>
+            <p class="split--text deco2">
+              「誰の、どんな問題を解決するのか？」<br class="u-show-sp">
+              「そのためにどうするのか？」を考え、<br class="u-show-sp">
+              ユーザーとお客様に愛されるようなサイト作りを目指します。<br>
+              ぜひ、デザインからコーディングまでご相談ください。<br>
+            </p>
+          </div>
         </div>
-        <div class="split--img"></div>
       </div>
       <!-- /split -->
 
       <!-- about -->
       <section class="about l-section" id="about">
         <div class="l-inner">
-          <h2 class="title">About</h2>
+          <h2 class="title ">About</h2>
           <div class="about--body">
             <p class="about--img"><img src="./images/person.png" alt="私のアイコン" /></p>
             <p>
-              1991年3月生まれの茨城県出身。<br>
+              1991年3月生まれの茨城県出身です。<br>
               国立大学の工学部を卒業後、2013年よりITエンジニアとして働いています。<br>
-              現在はWebアプリケーション開発や、データ分析関連の開発に携わっています。<br>
-              趣味はサッカー、キャンプなど。<br>
+              新卒で入社した会社では、うん百時間の残業や徹夜を幾度となく経験。<br>
+              そんなこんなありながらも、現在はWebアプリケーション開発や、データ分析関連の開発に携わっています。<br>
+              趣味はサッカー／キャンプ／映画鑑賞など。<br>
               好きなTV番組は家事ヤロウ、カンブリア宮殿です。
             </p>
           </div>
@@ -93,7 +96,7 @@
       <!-- skill -->
       <section class="skill l-section" id="skill">
         <div class="l-inner">
-          <h2 class="title">Skills</h2>
+          <h2 class="title deco3">Skills</h2>
           <div class="skill--list">
             <div class="skill--item js-fadeInUp">
               <div class="skill--icon icon-html fab fa-html5"></div>
@@ -145,7 +148,7 @@
       <!-- works -->
       <section class="works l-section" id="works">
         <div class="l-inner">
-          <h2 class="title">Works</h2>
+          <h2 class="title deco3">Works</h2>
           <div class="works--list">
             <div class="works--item js-fadeInUp">
               <a href="https://nagawanage.github.io/html_po-design/" alt="架空コーポレートサイト" target="_blank"
@@ -167,7 +170,7 @@
               <a href="works-template.html">
                 <p class="works--img"><img src="./images/alyssa-ledesma-TJlU.jpg" alt="sample" /></p>
                 <p class="works--sitename">サッカークラブHP</p>
-                <p class="works--info">デザイン・コーディング・WordPressテーマ作成</p>
+                <p class="works--info">デザイン・コーディング・WordPressテーマ化</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
@@ -227,6 +230,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/venders/jquery.inview.min.js"></script>
   <script src="scripts/main.js"></script>
+  <!-- vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+  <script>
+    VANTA.FOG({
+      el: "#vanta",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      highlightColor: 0xbed9ff,
+      midtoneColor: 0xdacbff,
+      lowlightColor: 0x2d8e4a,
+      baseColor: 0xffffff,
+      blurFactor: 0.3,
+      speed: 0.80,
+      zoom: 0.50
+    })
+  </script>
 </body>
 
 </html>

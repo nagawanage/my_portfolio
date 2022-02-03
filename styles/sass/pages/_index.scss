@@ -1,3 +1,39 @@
+.deco1 {
+  position: relative;
+  padding: 0.5em;
+  background: #ccdee4;
+  color: white;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px rgb(149, 158, 155);
+  }
+}
+
+.deco2 {
+  padding: 0.25em 1em;
+  background: transparent;
+  border-left: solid 5px #7798b6;
+}
+
+.deco3 {
+  position: relative;
+  padding: 0.25em 0;
+  width: 160px;
+  &:after {
+    content: "";
+    display: block;
+    height: 6px;
+    margin: -7px 0;
+    background: linear-gradient(to right, #a86982, transparent);
+    border-radius: 40%;
+  }
+}
+
 /*--------------------------------
  見出し
 ---------------------------------*/
@@ -21,28 +57,32 @@
 .about {
   background-color: $cBlue;
   color: $fcWhite;
+  padding: 80px 0;
   .title {
     color: $fcWhite;
   }
   &--body {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 50px;
-    align-items: center;
-    @include mq-down(md) {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    @include mq-up(md) {
+      align-items: center;
+      justify-items: left;
+      grid-template-columns: 140px 1fr;
+      gap: 50px;
     }
   }
   &--img {
+    padding: 40px 0;
     & img {
       background: $cWhite;
       border-radius: 50%;
-      // @include mq-down(lg) {
       object-fit: cover;
       height: 140px;
-      // }
+    }
+    @include mq-up(md) {
+      padding: 40px 0;
     }
   }
 }
