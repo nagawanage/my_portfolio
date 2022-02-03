@@ -19,3 +19,26 @@
 //     color: $color-git;
 //   }
 // }
+
+.icon {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: -20px;
+    width: 1em;
+    height: 1em;
+    transform: translate(-30%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &.twitter {
+    &::before {
+      background-image: url(../images/twitter.svg);
+    }
+  }
+}
