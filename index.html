@@ -14,6 +14,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/009a394729.js" crossorigin="anonymous"></script>
+  <!-- vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="scripts/venders/jquery.inview.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +37,7 @@
 </head>
 
 <body>
-  <!-- ToDo: footer -->
+  <!-- ToDo: implement footer -->
   <div class="l-container">
     <header class="header">
       <div class="header__inner">
@@ -58,20 +64,20 @@
     <main class="content">
 
       <!-- split -->
-      <div id="vanta">
-        <div class="split">
-          <div class="split--img"></div>
-          <div class="split--body">
-            <p class="split--title">WATARU<br>NAGATSUKA</p>
-            <p class="split--text deco_vertical-line">
-              「誰の、どんな問題を解決するのか？」<br class="u-show-sp">
-              「そのためにどうするのか？」を考え、<br class="u-show-sp">
-              ユーザーとお客様に愛されるようなサイト作りを目指します。<br>
-              ぜひ、デザインからコーディングまでご相談ください。<br>
-            </p>
-          </div>
+      <!-- <div id="vanta"> -->
+      <div class="split" id="vanta">
+        <div class="split--img"></div>
+        <div class="split--body">
+          <p class="split--title">WATARU<br>NAGATSUKA</p>
+          <p class="split--text deco_vertical-line">
+            「誰の、どんな問題を解決するのか？」<br class="u-show-sp">
+            「そのためにどうするのか？」を考え、<br class="u-show-sp">
+            ユーザーとお客様に愛されるようなサイト作りを目指します。<br>
+            ぜひ、デザインからコーディングまでご相談ください。<br>
+          </p>
         </div>
       </div>
+      <!-- </div> -->
       <!-- /split -->
 
       <!-- about -->
@@ -113,7 +119,7 @@
               <div class="skill--body">
                 <h3 class="skill--name">Sass</h3>
                 <p class="skill--text">
-                  設計概念に基づき、適切な命名や再利用・保守・拡張を意識したコーディングを心がけています。</p>
+                  Mixin等独自の記法を用いた効率的な制御が可能です。また、設計概念に基づき適切な命名や再利用・保守・拡張を意識したコーディングを心がけています。</p>
               </div>
             </div>
             <div class="skill--item js-fadeInUp">
@@ -121,7 +127,7 @@
               <div class="skill--body">
                 <h3 class="skill--name">JavaScript/jQuery</h3>
                 <p class="skill--text">
-                  基本的な制御やアニメーションの作成が可能です。</p>
+                  ブラウザ表示（DOM）の基本的な制御や、動きのあるアニメーションの作成・適用が可能です。</p>
               </div>
             </div>
             <div class="skill--item js-fadeInUp">
@@ -137,7 +143,7 @@
               <div class="skill--body">
                 <h3 class="skill--name">Git</h3>
                 <p class="skill--text">
-                  基本的な操作からgit-flowの概念に基づくブランチの役割まで理解しております。お客様のソース管理に合わせた対応が可能です。</p>
+                  普段の業務でも使用しており、基本的な操作からgit-flowの概念に基づくブランチの役割まで理解しております。お客様のソース管理に合わせた対応が可能です。</p>
               </div>
             </div>
           </div>
@@ -167,28 +173,28 @@
               </a>
             </div>
             <div class="works--item js-fadeInUp">
-              <a href="works-template.html">
+              <a>
                 <p class="works--img"><img src="./images/alyssa-ledesma-TJlU.jpg" alt="sample" /></p>
                 <p class="works--sitename">サッカークラブHP</p>
                 <p class="works--info">デザイン・コーディング・WordPressテーマ化</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
-              <a href="works-template.html">
+              <a>
                 <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="sample" /></p>
                 <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
-              <a href="works-template.html">
+              <a>
                 <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="" /></p>
                 <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
               </a>
             </div>
             <div class="works--item js-fadeInUp">
-              <a href="works-template.html">
+              <a>
                 <p class="works--img"><img src="./images/works-dummy-thumb.jpg" alt="" /></p>
                 <p class="works--sitename">作品名が入る</p>
                 <p class="works--info">Design</p>
@@ -207,9 +213,10 @@
             お問い合わせは、<br class="u-show-sp">SNSかメールにてお願いいたします。
           </p>
           <div class="contact--list">
-            <a class="contact--item icon twitter" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-            <!-- <a class="contact--item instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> -->
-            <span class="contact--item">nagawanage_contact@gmail.com</span>
+            <a class="contact--item twitter icon--twitter" href="https://twitter.com/" target="_blank"
+              rel="noopener">Twitter</a>
+            <a class="contact--item mail icon--mail"
+              href="mailto:nagawa_contact@gmail.com?subject=ポートフォリオからのお問い合わせ">mail</a>
           </div>
         </div>
       </section>
@@ -227,29 +234,7 @@
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="scripts/venders/jquery.inview.min.js"></script>
   <script src="scripts/main.js"></script>
-  <!-- vanta.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
-  <script>
-    VANTA.FOG({
-      el: "#vanta",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      highlightColor: 0xbed9ff,
-      midtoneColor: 0xdacbff,
-      lowlightColor: 0x2d8e4a,
-      baseColor: 0xffffff,
-      blurFactor: 0.3,
-      speed: 0.80,
-      zoom: 0.50
-    })
-  </script>
 </body>
 
 </html>

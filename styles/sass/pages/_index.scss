@@ -49,7 +49,7 @@
 }
 
 .lead {
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 
 /*--------------------------------
@@ -112,7 +112,19 @@
     align-items: center;
     justify-content: space-between;
     width: 48%;
-    margin-bottom: 50px;
+    min-height: 8em;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.4);
+    // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(128, 128, 128, 0.1);
+    padding: 1em;
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(128, 128, 128, 0.1);
+      border-color: transparent;
+    }
     @include mq-up(md) {
       align-items: flex-start;
     }
@@ -219,13 +231,37 @@
 /*--------------------------------
   Contact
   ---------------------------------*/
-.contact {
-  &--item:not(:last-child) {
-    margin-right: 10px;
-  }
+// .contact {
+//   &--item {
+//     color: #075197;
+//     &:not(:last-child) {
+//       margin-right: 10px;
+//     }
 
-  &--text {
-    margin-top: 10px;
+//     &--text {
+//       margin-top: 10px;
+//     }
+//   }
+// }
+
+.contact {
+  &--list {
+    padding-left: 0.5em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+  &--item {
+    padding: 0.5em 2em;
+    border-radius: 2px;
+    color: #fff;
+    line-height: 2em;
+  }
+  & .twitter {
+    background-color: #1da1f2;
+  }
+  & .mail {
+    background-color: #635353;
   }
 }
 

@@ -21,24 +21,22 @@
 // }
 
 .icon {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 50%;
-    left: -20px;
-    width: 1em;
-    height: 1em;
-    transform: translate(-30%, -50%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &.twitter {
+  &--twitter {
     &::before {
-      background-image: url(../images/twitter.svg);
+      font-family: "Font Awesome 5 brands"; //for Brands Style
+      content: "\f099";
+      font-weight: 400;
+      font-size: 1.5em;
+      margin-right: 0.5em;
+    }
+  }
+  &--mail {
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f0e0";
+      font-weight: 400;
+      font-size: 1.5em;
+      margin-right: 0.5em;
     }
   }
 }

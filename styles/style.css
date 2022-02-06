@@ -79,6 +79,7 @@ a {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 ul {
@@ -443,17 +444,29 @@ button {
 .split--body {
   height: 100%;
   width: 100%;
-  padding: 60px 0;
+  padding: 15vh 0;
   padding-right: 3%;
   padding-left: 8%;
 }
 
+@media screen and (min-width: 600px) {
+  .split--body {
+    padding: 100px inherit;
+  }
+}
+
 .split--title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   line-height: 1.5;
   letter-spacing: 0.05em;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .split--title {
+    padding: 100px inherit;
+  }
 }
 
 .split--text {
@@ -819,27 +832,20 @@ button {
   }
 }
 
-.icon {
-  position: relative;
+.icon--twitter::before {
+  font-family: "Font Awesome 5 brands";
+  content: "\f099";
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-right: 0.5em;
 }
 
-.icon::before {
-  position: absolute;
-  display: block;
-  content: "";
-  top: 50%;
-  left: -20px;
-  width: 1em;
-  height: 1em;
-  -webkit-transform: translate(-30%, -50%);
-          transform: translate(-30%, -50%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.icon.twitter::before {
-  background-image: url(../images/twitter.svg);
+.icon--mail::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-right: 0.5em;
 }
 
 @media screen and (max-width: 600px) {
@@ -1001,7 +1007,7 @@ button {
 }
 
 .lead {
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 
 /*--------------------------------
@@ -1094,7 +1100,20 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 48%;
-  margin-bottom: 50px;
+  min-height: 8em;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.4);
+          box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.4);
+  padding: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.skill--item:hover {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1);
+  border-color: transparent;
 }
 
 @media screen and (min-width: 600px) {
@@ -1230,12 +1249,30 @@ button {
 /*--------------------------------
   Contact
   ---------------------------------*/
-.contact--item:not(:last-child) {
-  margin-right: 10px;
+.contact--list {
+  padding-left: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact--text {
-  margin-top: 10px;
+.contact--item {
+  padding: 0.5em 2em;
+  border-radius: 2px;
+  color: #fff;
+  line-height: 2em;
+}
+
+.contact .twitter {
+  background-color: #1da1f2;
+}
+
+.contact .mail {
+  background-color: #635353;
 }
 
 /*media Queries 767

@@ -84,4 +84,23 @@ $(function () {
       //   $(this).css("opacity", 0); //非表示にしておく
     }
   });
+
+  /************************
+   * vanta
+   ************************/
+  VANTA.FOG({
+    el: "#vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    highlightColor: 0xbed9ff,
+    midtoneColor: 0xdacbff,
+    lowlightColor: 0x2d8e4a,
+    baseColor: 0xffffff,
+    blurFactor: 0.3,
+    speed: 0.8,
+    zoom: 0.5,
+  });
 });

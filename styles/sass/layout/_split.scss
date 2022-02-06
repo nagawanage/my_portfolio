@@ -9,16 +9,23 @@
   &--body {
     height: 100%;
     width: 100%;
-    padding: 60px 0;
+    // padding: 60px 0;
+    padding: 15vh 0;
     padding-right: 3%;
     padding-left: 8%;
+    @include mq-up(md) {
+      padding: 100px inherit;
+    }
   }
   &--title {
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
     line-height: 1.5;
     letter-spacing: 0.05em;
     padding-bottom: 20px;
+    @include mq-up(md) {
+      padding: 100px inherit;
+    }
   }
   &--text {
     font-size: 0.9em;
