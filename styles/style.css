@@ -953,23 +953,6 @@ button {
 }
 
 /* Pages */
-.deco1 {
-  position: relative;
-  padding: 0.5em;
-  background: #ccdee4;
-  color: white;
-}
-
-.deco1::before {
-  position: absolute;
-  content: "";
-  top: 100%;
-  left: 0;
-  border: none;
-  border-bottom: solid 15px transparent;
-  border-right: solid 20px #959e9b;
-}
-
 .deco_vertical-line {
   margin-left: 0.5em;
   padding: 0.25em 1em;
@@ -977,13 +960,13 @@ button {
   border-left: solid 5px #7798b6;
 }
 
-.deco3 {
+.deco_shadow {
   position: relative;
   padding: 0.25em 0;
   width: 160px;
 }
 
-.deco3:after {
+.deco_shadow:after {
   content: "";
   display: block;
   height: 6px;
