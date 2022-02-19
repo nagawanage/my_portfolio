@@ -9,7 +9,7 @@ $(function () {
 
   $window.on("scroll", function () {
     $transPos = $header.outerHeight();
-    console.log($transPos, $header.height());
+    // console.log($transPos, $header.height());
     if ($window.scrollTop() > $transPos) {
       $header.addClass("is-active");
     } else {
